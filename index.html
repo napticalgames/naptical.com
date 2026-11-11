@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Naptical Games</title>
+<meta name="description" content="Naptical Games is an independent game studio. Our first game is on the way.">
+<link rel="canonical" href="https://naptical.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Naptical Games">
+<meta property="og:title" content="Naptical Games">
+<meta property="og:description" content="Independent game studio. Good ideas, well rested.">
+<meta property="og:url" content="https://naptical.com/">
+<meta property="og:image" content="https://naptical.com/og.png">
+<meta property="og:image:width" content="1280">
+<meta property="og:image:height" content="720">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@napticalgames">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="theme-color" content="#242452">
+<link rel="preload" href="/fredoka.woff" as="font" type="font/woff" crossorigin>
+<style>
+@font-face{font-family:"Fredoka";src:url("/fredoka.woff") format("woff");font-weight:400 600;font-display:swap}
+:root{--navy:#242452;--navy-deep:#1a1a3e;--cream:#f6f1e6;--yellow:#f8d660;--lilac:#b9a6e6}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--navy);color:var(--cream);
+  font-family:"Fredoka",ui-rounded,"Segoe UI",system-ui,sans-serif;font-weight:400;
+  background-image:radial-gradient(120% 90% at 50% 0%,#2d2d66 0%,var(--navy) 55%,var(--navy-deep) 100%);
+  background-attachment:fixed;-webkit-font-smoothing:antialiased}
+.sky{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.sky i{position:absolute;display:block;border-radius:50%;background:var(--cream);
+  box-shadow:0 0 8px 2px rgba(246,241,230,.6);animation:twinkle var(--d) ease-in-out var(--t) infinite}
+.sky i.y{background:var(--yellow);box-shadow:0 0 9px 2px rgba(248,214,96,.65)}
+.sky b{position:absolute;display:block;background:var(--cream);
+  clip-path:polygon(50% 0,56% 44%,100% 50%,56% 56%,50% 100%,44% 56%,0 50%,44% 44%);
+  filter:drop-shadow(0 0 4px rgba(246,241,230,.7));animation:sparkle var(--d) ease-in-out var(--t) infinite}
+.sky b.y{background:var(--yellow)}
+@keyframes twinkle{0%,100%{opacity:.35;transform:scale(.7)}50%{opacity:1;transform:scale(1.15)}}
+@keyframes sparkle{0%,100%{opacity:.3;transform:scale(.55) rotate(0deg)}50%{opacity:1;transform:scale(1) rotate(45deg)}}
+@media (prefers-reduced-motion:reduce){.sky i,.sky b{animation:none;opacity:.8}}
+main{position:relative;min-height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:40px 16px 24px;text-align:center}
+.logo{width:min(440px,78vw);height:auto;display:block}
+h1{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.tag{margin:34px 0 0;font-size:clamp(1.15rem,3.6vw,1.5rem);font-weight:500;letter-spacing:.01em}
+.soon{margin:10px 0 0;font-size:clamp(1rem,3vw,1.15rem);color:var(--lilac)}
+nav{margin-top:36px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:520px}
+nav a{color:var(--cream);text-decoration:none;font-weight:500;font-size:1rem;padding:9px 18px;border-radius:999px;
+  border:1.5px solid rgba(246,241,230,.35);transition:background .15s,color .15s,border-color .15s}
+nav a:hover,nav a:focus-visible{background:var(--yellow);border-color:var(--yellow);color:var(--navy);outline:none}
+footer{margin-top:56px;font-size:.85rem;color:rgba(246,241,230,.55)}
+</style>
+</head>
+<body>
+<div class="sky" aria-hidden="true"></div>
+<main>
+  <h1>Naptical Games</h1>
+  <img class="logo" src="/logo.svg" width="981" height="946" alt="Naptical Games: a sleeping owl in a nightcap">
+  <p class="tag">Independent game studio. Good ideas, well rested.</p>
+  <p class="soon">Our first game is on the way.</p>
+  <nav aria-label="Follow Naptical Games">
+    <a href="https://x.com/napticalgames" rel="me noopener">X</a>
+    <a href="https://www.youtube.com/@napticalgames" rel="me noopener">YouTube</a>
+    <a href="https://bsky.app/profile/napticalgames.bsky.social" rel="me noopener">Bluesky</a>
+    <a href="https://www.instagram.com/napticalgames" rel="me noopener">Instagram</a>
+  </nav>
+  <footer>&copy; 2026 Naptical</footer>
+</main>
+<script>
+(function(){var sky=document.querySelector(".sky"),n,t;
+function r(){n=(n*1103515245+12345)%2147483648;return n/2147483648}
+function build(){n=1234567;sky.textContent="";var w=innerWidth,h=innerHeight,
+total=Math.max(44,Math.min(150,Math.round(w*h/13000))),bigs=Math.round(total*.22);
+for(var k=0;k<total;k++){var big=k<bigs,e=document.createElement(big?"b":"i"),x=r()*100,y=r()*100,
+m=50-Math.min(big?37:26,(big?400:330)/w*100);
+if(x>m&&x<100-m&&y>7&&y<93){x=x<50?r()*(m-1)+.5:100.5-m+r()*(m-1)}
+var z=big?12+r()*16:2.2+r()*3;
+e.style.cssText="left:"+x.toFixed(2)+"%;top:"+y.toFixed(2)+"%;width:"+z.toFixed(1)+"px;height:"+z.toFixed(1)+"px;--d:"+(2.2+r()*4).toFixed(2)+"s;--t:-"+(r()*6).toFixed(2)+"s";
+if(r()<.3)e.className="y";sky.appendChild(e)}}
+build();addEventListener("resize",function(){clearTimeout(t);t=setTimeout(build,200)});})();
+</script>
+</body>
+</html>
